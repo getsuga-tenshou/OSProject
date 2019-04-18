@@ -13,3 +13,13 @@ int Burst_time[10],Process_no[10],Wait_time[10],Turnaround_time[10];
         printf("Enter Prior:");
         scanf("%d",&Prior[i]);
         Process_no[i]=i+1;
+    }
+    
+    for(i=0;i<Number_of_Process;i++)
+    {
+        flag=i;
+        for(j=i+1;j<Number_of_Process;j++)
+        {
+            if(Prior[j]<Prior[flag])
+            flag=j;
+        }
