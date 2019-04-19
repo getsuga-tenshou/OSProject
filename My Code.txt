@@ -23,3 +23,13 @@ int Burst_time[10],Process_no[10],Wait_time[10],Turnaround_time[10];
             if(Prior[j]<Prior[flag])
             flag=j;
         }
+     temp=Prior[i];
+        Prior[i]=Prior[flag];
+        Prior[flag]=temp;
+        temp=B_T[i];
+        Burst_time[i]=Burst_time[flag];
+        Burst_time[flag]=temp;
+        temp=Process_no[i];
+        Process_no[i]=Process_no[flag];
+        Process_no[flag]=temp;
+    }
