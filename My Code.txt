@@ -33,3 +33,10 @@ int Burst_time[10],Process_no[10],Wait_time[10],Turnaround_time[10];
         Process_no[i]=Process_no[flag];
         Process_no[flag]=temp;
     }
+    Wait_time[0]=0;  
+    for(i=1;i<Number_of_Process;i++)
+    {
+        Wait_time[i]=0;
+        for(j=0;j<i;j++)
+            Wait_time[i]+=Burst_time[j];
+        Turnaround_time+=Wait_time[i];
