@@ -3,8 +3,8 @@
 int main()
 {
 
-int Burst_time[10],Process_no[10],Wait_time[10],Turnaround_time[10];
-    int Arrival_time[10],Prior[10],i,j,Number_of_Process,tot=0,flag,temp,Avg_Wait_time,Avg_Turnaround_time;
+    unsigned int Burst_time[10],Process_no[10],Wait_time[10],Turnaround_time[10];
+    unsigned int Arrival_time[10],Prior[10],i,j,Number_of_Process,tot=0,flag,temp,Avg_Wait_time,Avg_Turnaround_time;
     printf("Enter Number of Process:");
     scanf("%d",&Number_of_Process);
     printf("\nEnter Burst Time and Prior\n");
