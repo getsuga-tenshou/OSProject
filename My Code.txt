@@ -40,3 +40,21 @@ int Burst_time[10],Process_no[10],Wait_time[10],Turnaround_time[10];
         for(j=0;j<i;j++)
             Wait_time[i]+=Burst_time[j];
         Turnaround_time+=Wait_time[i];
+    }
+    Avg_Wait_time=Turnaround_time/Number_of_Process;  
+    Turnaround_time=0;
+    printf("_______________________________________________________________");
+    printf("\nProcess\t       Burst Time              Wait Time                Turnaround time");
+    for(i=0;i<Number_of_Process;i++)
+    {
+        Turnaround_time[i]=Burst_time[i]+Wait_time[i];  
+        Turnaround_time+=Turnaround_time[i];
+        printf("\nProcess %d \t %d\t \t   %d\t\t%d",Process_no[i],Burst_time[i],Wait_time[i],Turnaround_time[i]);
+    }
+        printf("\n_______________________________________________________________");
+    Avg_Turnaround_time=Turnaround_time/Number_of_Process;
+    printf("\n\nAvg W T= %d",Avg_Wait_time);
+    printf("\nAvg T A T= %d",Avg_Turnaround_time);
+    return 0;
+}
+     
