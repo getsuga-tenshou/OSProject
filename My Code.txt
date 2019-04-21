@@ -4,7 +4,8 @@ int main()
 {
 
     unsigned int Burst_time[10],Process_no[10],Wait_time[10],Turnaround_time[10];
-    unsigned int Arrival_time[10],Prior[10],i,j,Number_of_Process,tot=0,flag,temp,Avg_Wait_time,Avg_Turnaround_time;
+    unsigned int Arrival_time[10],Prior[10],i,j,Number_of_Process,tot=0,flag,temp;
+    float Avg_Wait_time,Avg_Turnaround_time;
     printf("Enter Number of Process:");
     scanf("%d",&Number_of_Process);
     printf("\nEnter Burst Time and Prior\n");
@@ -58,8 +59,8 @@ int main()
     }
         printf("\n_______________________________________________________________");
     Avg_Turnaround_time=tot/Number_of_Process;
-    printf("\n\nAvg Wait Time= %d",Avg_Wait_time);
-    printf("\nAvg TurnAround Time= %d",Avg_Turnaround_time);
+    printf("\n\nAvg Wait Time= %f",Avg_Wait_time);
+    printf("\nAvg TurnAround Time= %f",Avg_Turnaround_time);
     return 0;
 }
      
